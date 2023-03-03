@@ -6,16 +6,16 @@ matrixB = [[9, 8, 7],
            [6, 5, 4],
            [3, 2, 1]]
 
-result = [[0, 0, 0],
-          [0, 0, 0],
-          [0, 0, 0]]
+def matrixMultiplication(matrixA, matrixB):
+    
+    result = [[0, 0, 0],
+              [0, 0, 0],
+              [0, 0, 0]]
 
+    for m in range(len(matrixA)):
+        for n in range(len(matrixB[0])):
+            for k in range(len(matrixB)):
+                result[m][n] += matrixA[m][k] * matrixB[k][n]
 
-for m in range(len(matrixA)):
-    for n in range(len(matrixB[0])):
-        for k in range(len(matrixB)):
-            result[m][n] += matrixA[m][k] * matrixB[k][n]
-
-
-for i in result:
-    print(i)
+    for i in result:
+        print(i)
