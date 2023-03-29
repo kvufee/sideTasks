@@ -1,10 +1,5 @@
-matrixA = [[1, 2, 3],
-           [4, 5, 6],
-           [7, 8, 9]]
-
-matrixB = [[9, 8, 7],
-           [6, 5, 4],
-           [3, 2, 1]]
+mx1 = list(map(int, input().split()))
+mx2 = list(map(int, input().split()))
 
 def matrixMultiplication(matrixA, matrixB):
     
@@ -19,3 +14,6 @@ def matrixMultiplication(matrixA, matrixB):
 
     for i in result:
         print(i)
+        
+
+ans = matrixMultiplication(mx1, mx2)
