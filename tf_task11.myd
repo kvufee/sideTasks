@@ -8,5 +8,7 @@ HAVING COUNT(email) > 1;
 
 -- Напишите запрос, с помощью которого можно определить возраст каждого сотрудника из таблицы Staff на момент запроса.
 
-SELECT name, birthday
-FROM Staff
+SELECT name, birthday, CURDATE(),
+TIMESTAMPDIFF(YEAR, birthday, CURDATE()) AS curr_age
+FROM Staff;
+
