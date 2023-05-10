@@ -12,3 +12,9 @@ SELECT name, birthday, CURDATE(),
 TIMESTAMPDIFF(YEAR, birthday, CURDATE()) AS curr_age
 FROM Staff;
 
+
+-- Напишите запрос, с помощью которого можно определить должность (Jobtitles.name) со вторым по величине уровнем зарплаты.
+
+SELECT Jobtitles.name, Staff.jobtitle_id, max(Staff.salary)
+FROM Staff, Jobtitles
+WHERE Staff.salary < (SELECT max(salary) FROM Staff);
