@@ -1,0 +1,12 @@
+-- Напишите запрос, с помощью которого можно найти дубли в поле email из таблицы Sfaff.
+
+SELECT email COUNT(email)
+FROM Staff
+GROUP BY email
+HAVING COUNT(email) > 1;
+
+
+-- Напишите запрос, с помощью которого можно определить возраст каждого сотрудника из таблицы Staff на момент запроса.
+
+SELECT name, birthday
+FROM Staff
